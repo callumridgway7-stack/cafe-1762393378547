@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Blue - About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blue: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            600: '#2563eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-blue-600 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Cafe Blue</h1>
+            <ul class="flex space-x-6">
+                <li><a href="/" class="hover:underline">Home</a></li>
+                <li><a href="/about.html" class="hover:underline">About</a></li>
+                <li><a href="/contact.html" class="hover:underline">Contact</a></li>
+                <li class="relative">
+                    <a href="#" class="hover:underline" onclick="toggleCart()">Cart (<span id="cartCount">0</span>)</a>
+                    <div id="cartModal" class="hidden absolute right-0 mt-2 w-64 bg-white border rounded shadow-lg p-4 z-50">
+                        <h3 class="font-bold">Shopping Cart</h3>
+                        <ul id="cartItems"></ul>
+                        <p>Total: $<span id="cartTotal">0</span></p>
+                        <button onclick="clearCart()" class="bg-red-500 text-white px-4 py-2 rounded mt-2">Clear Cart</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="py-16 bg-blue-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-600">About Cafe Blue</h2>
+            <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
+                <p class="mb-6">Cafe Blue is a cozy coffee shop nestled in the heart of the city, offering a serene escape with our signature blue-themed ambiance. Founded in 2020, we pride ourselves on sourcing the finest coffee beans from sustainable farms around the world.</p>
+                <p class="mb-6">Our menu features a variety of handcrafted beverages and fresh pastries, all prepared with love by our expert baristas. Whether you're stopping by for a quick espresso or lingering over a latte, Cafe Blue is your perfect spot.</p>
+                <p>Come visit us and experience the blue serenity!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Cafe Blue. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
